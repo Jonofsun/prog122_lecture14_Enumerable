@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:prog122_lecture14_Enumerable"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}">
+        <Canvas Height="NaN" Margin="10,10,549,10" Width="NaN" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Label Content="Header" Canvas.Left="19" Canvas.Top="10"/>
+            <TextBox x:Name="txtName" Canvas.Left="19" TextWrapping="Wrap" Text="TextBox" Canvas.Top="41" Width="212" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtAmount" Canvas.Left="19" TextWrapping="Wrap" Text="TextBox" Canvas.Top="113" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top" Height="111"/>
+            <Label Content="Body" Canvas.Left="19" Canvas.Top="74"/>
+            <ComboBox x:Name="cmbFilter" Canvas.Left="19" Canvas.Top="305" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="cmbFilter_SelectionChanged"/>
+            <Label Content="Filter" Canvas.Left="74" Canvas.Top="274" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102"/>
+            <Button x:Name="btnPost" Content="Button" Canvas.Left="19" Canvas.Top="358" HorizontalAlignment="Left" VerticalAlignment="Center" Width="212" Height="36" Click="btnPost_Click"/>
+            <TextBox x:Name="txtFilePath" Canvas.Left="19" TextWrapping="NoWrap" Text="" Canvas.Top="251" Width="121" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnSelectPicture" Content="Picture" Canvas.Left="145" Canvas.Top="250" HorizontalAlignment="Center" VerticalAlignment="Top" Width="86" Click="btnSelectPicture_Click"/>
+        </Canvas>
+        <Image x:Name="imgDisplay" HorizontalAlignment="Left" Height="316" Margin="300,10,0,0" VerticalAlignment="Top" Width="450"/>
+        <RichTextBox Height="NaN" Margin="300,361,46,10" Width="NaN">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="rtbRunDisplay" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>
